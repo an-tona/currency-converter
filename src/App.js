@@ -63,7 +63,7 @@ function App() {
     setIsAmountFrom(false);
   }
 
-// Отримання курсів валют відносно UAH
+  // Отримання курсів валют відносно UAH
   useEffect(() => {
     const fetchUSD = fetch(CURR_URL + 'USD')
       .then(res => res.json())
@@ -114,23 +114,21 @@ function App() {
             currencyList={currencyList}
             fromCurrency={convertFrom}
             toCurrency={convertTo}
+            // onChangeCurrency={handleCurrencyFromChange}
             onChangeCurrency={e => setConvertFrom(e.target.value)}
             onChangeAmount={handleAmountFromChange}
             isCurrencyFrom={true}
             exchangeRate={exchangeRate}
           />
-          <div className='switch-container'
-          onClick={handleSwitchCurrencies}
-          >
-            <img src={switchLogo} alt="Switch Logo" 
-            className={`switch-logo ${isRotated ? 'rotated' : ''}`}
-            />
+          <div className='switch-container' onClick={handleSwitchCurrencies}>
+            <img src={switchLogo} alt="Switch Logo" className={`switch-logo ${isRotated ? 'rotated' : ''}`} />
           </div>
           <CurrencyComponent
             amount={amountTo}
             currencyList={currencyList}
             fromCurrency={convertTo}
             toCurrency={convertFrom}
+            // onChangeCurrency={handleCurrencyToChange}
             onChangeCurrency={e => setConvertTo(e.target.value)}
             onChangeAmount={handleAmountToChange}
             isCurrencyFrom={false}

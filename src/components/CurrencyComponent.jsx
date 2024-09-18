@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import currencyToCountryMapping from '../data/currencyToCountryMapping.jsx'
 
 const FLAG_URL = 'https://flagsapi.com/';
 
@@ -35,7 +34,7 @@ function CurrencyComponent(props) {
           />
           {fromCurrency && (
               <img
-                  src={`${FLAG_URL}/${currencyToCountryMapping[fromCurrency]}/flat/32.png`}
+                  src={`${FLAG_URL}/${fromCurrency.slice(0, -1)}/flat/32.png`}
                   alt={fromCurrency}
                   className='currency-flag'
               />

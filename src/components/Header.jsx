@@ -4,7 +4,7 @@ function Header({ exchangeRates }) {
   return (
     <header className="header">
       <div className="logo">
-        <h1>Convertor</h1>
+        <h1>Converter</h1>
       </div>
       <div className='header-rates'>
         <p>{`$ ${exchangeRates.USD}`}</p>

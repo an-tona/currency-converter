@@ -114,7 +114,6 @@ function App() {
             currencyList={currencyList}
             fromCurrency={convertFrom}
             toCurrency={convertTo}
-            // onChangeCurrency={handleCurrencyFromChange}
             onChangeCurrency={e => setConvertFrom(e.target.value)}
             onChangeAmount={handleAmountFromChange}
             isCurrencyFrom={true}
@@ -128,7 +127,6 @@ function App() {
             currencyList={currencyList}
             fromCurrency={convertTo}
             toCurrency={convertFrom}
-            // onChangeCurrency={handleCurrencyToChange}
             onChangeCurrency={e => setConvertTo(e.target.value)}
             onChangeAmount={handleAmountToChange}
             isCurrencyFrom={false}
